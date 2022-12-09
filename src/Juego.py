@@ -1,6 +1,4 @@
 # Importamos todas las librerías necesarias
-import time
-
 from matplotlib.pylab import *
 import matplotlib.pyplot as plt
 import numpy as np
