@@ -42,7 +42,6 @@ b = ((g) / ((2 * vi ** 2) * cos(θ) ** 2))
 print()
 ymax = (vi ** 2) * (np.sin(θ) * sin(θ)) / (2 * g)
 xmax = (vi ** 2) * (np.sin(2 * θ)) / (g)
-dmax = (vi ** 2) * (np.sin(θ) ** 2) / 2 * (g)
 print("................................................................................")
 print("................................................................................")
 tmax = (vi * sin(θ)) / (g)
@@ -50,7 +49,6 @@ tv = 2 * (tmax)
 # Salidas de los datos calculados
 print(str("La altura máxima  alcanzada por el proyectil es: Ymax") + " = " + str(ymax) + " m")
 print(str("El alcance máximo horizontal  del proyectil es: Xmax") + " = " + str(xmax) + " m")
-print(str("El alcance máximo vertical  del proyectil es: Dmax") + " = " + str(dmax) + " m")
 print("................................................................................")
 print("................................................................................")
 print("La altura máxima (m) alcanzada por el proyectil es: Ymax =", format(ymax, ".2f"))
@@ -109,7 +107,7 @@ plt.annotate('Altura Máxima',
              arrowprops=dict(arrowstyle="->",
                              connectionstyle="arc, angleA = 0,armA = 30,rad = 50"))
              # dibujar tabla dentro del gráfico
-valores=[[format(np.max(xmax), ".2f"), format(np.min(ymax), ".2f"), format(np.max(dmax), ".2f")]]
+valores=[[format(np.max(xmax), ".2f"), format(np.min(ymax), ".2f")]]
 etiquetas_col = ["xmax (m)", "ymax (m)", "vertical dmax(m)"]
 
 plt.table(cellText=valores, colLabels=etiquetas_col, colWidths=[0.15] * len(f(x)), loc='upper right')
